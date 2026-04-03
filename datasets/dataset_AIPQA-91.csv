@@ -1,0 +1,10 @@
+${test_case},${First_Name},${Last_Name},${Postal_Code},${Expected_Result}
+User enters valid details,Naim,Ashree,43000,SUCCESS
+User enters another valid set of details,Ali,Ahmad,50000,SUCCESS
+User leaves first name empty,,Ashree,43000,ERROR_FIRST_NAME_REQUIRED
+User leaves last name empty,Naim,,50000,ERROR_LAST_NAME_REQUIRED
+User leaves postal code empty,Naim,Ashree,,ERROR_POSTAL_CODE_REQUIRED
+User enters numbers in first name,Naim123,Ashree,43000,INVALID_FIRST_NAME_ACCEPTED_OR_VALIDATED
+User enters numbers in last name,Naim,Ashree@123,43000,INVALID_LAST_NAME_ACCEPTED_OR_VALIDATED
+User enters invalid postal code format,Naim,Ashree,ABCDE,INVALID_POSTAL_CODE_ACCEPTED_OR_VALIDATED
+User enters very long first name,VeryLongNameExceedingLimit123456,Ashree,43000,FIELD_LENGTH_ACCEPTED_OR_VALIDATED

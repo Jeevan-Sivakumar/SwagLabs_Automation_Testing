@@ -1,0 +1,8 @@
+*** Test Cases ***,${username},${password},${expected_result}
+Valid login with standard user,standard_user,secret_sauce,SUCCESS
+Locked out user login attempt,locked_out_user,secret_sauce,ERROR_LOCKED
+Invalid password for valid user,standard_user,wrong_pass,ERROR_INVALID
+Invalid username with valid password,wrong_user,secret_sauce,ERROR_INVALID
+Invalid username with valid password,,secret_sauce,ERROR_EMPTY_USERNAME
+Empty password field,standard_user,,ERROR_EMPTY_PASSWORD
+Both username and password empty,,,ERROR_EMPTY_USERNAME
